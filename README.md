@@ -108,11 +108,11 @@ docker restart airflow-scheduler
 
 This DAG fetches data from IQAir, transforms it, and stores it into PostgreSQL:
 
+- Airflow DAG graph view
 ![DAG Screenshot](images/dag-screenshot.png)
 
-- Airflow DAG graph view
-- PostgreSQL sample records
-- Tableau dashboard of AQI trends
+- PostgreSQL : Example rows inserted from DAG run
+![DAG PostgreSQL](images/PostgreSQL.png)
 
 ---
 
@@ -131,7 +131,7 @@ http://localhost:8080
 
 ## 📊 Visualization Preview (Tableau)
 
-> [Insert dashboard screenshot or Tableau Public link here if available]
+![Dashboard Preview](images/Air-quality-Airflow-Tableau.png)
 
 ---
 
@@ -140,7 +140,7 @@ http://localhost:8080
 - IQAir API used in the free tier (limited by request volume)
 - Airflow version: 2.8.1
 - PostgreSQL version: 13
-- Schedule interval: customizable (default is hourly, can change to cron like `'25 * * * *'`)
+- Schedule interval: configurable (currently set to every hour at minute 10 - `'10 * * * *'`)
 
 ---
 

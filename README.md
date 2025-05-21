@@ -104,7 +104,11 @@ docker restart airflow-scheduler
 
 ## 📸 Sample Output
 
-> _(Include screenshots below – Airflow UI, DAG Graph, or Tableau dashboard)_
+### Airflow DAG Structure
+
+This DAG fetches data from IQAir, transforms it, and stores it into PostgreSQL:
+
+![DAG Screenshot](images/dag-screenshot.png)
 
 - Airflow DAG graph view
 - PostgreSQL sample records

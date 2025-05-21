@@ -108,7 +108,7 @@ with DAG(
     dag_id='iqair_air_quality_pipeline',
     default_args=default_args,
     start_date=datetime(2025, 5, 20),
-    schedule_interval='10 * * * *',
+    schedule_interval='25 * * * *',
     catchup=False,
 ) as dag:
 

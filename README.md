@@ -8,7 +8,7 @@ This project implements a complete end-to-end data pipeline that collects air qu
 
 - ⏱️ **Scheduler**: Apache Airflow orchestrates the ETL process hourly (configurable)
 - ☁️ **Data Source**: IQAir API providing real-time air quality metrics in **Bangkok, Thailand**, including:
-  - AQI (US & China standards), PM2.5, temperature, humidity, wind speed & direction, pressure
+  - AQI (US & China standards), temperature, humidity, wind speed & direction, pressure
 - 🗃️ **Data Sink**: PostgreSQL database for structured data storage
 - 🔁 **Automation**: CI/CD using GitHub Actions + self-hosted runner to auto-deploy DAGs
 - 📊 **Visualization**: Data available for BI tools like Tableau or Looker Studio

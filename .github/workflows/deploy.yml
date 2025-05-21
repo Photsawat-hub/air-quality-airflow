@@ -1,4 +1,4 @@
-name: Deploy DAG to Airflow (local)
+name: Deploy DAG to Airflow (Local)
 
 on:
   push:
@@ -9,15 +9,15 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Deploy DAG to local airflow
+      - name: Copy DAGs to airflow container
         run: |
-          echo "📂 Copying DAG to airflow volume..."
+          echo "📂 Copying DAGs to airflow-webserver..."
           docker cp dags/. airflow-webserver:/opt/airflow/dags/
-          echo "♻️ Restarting airflow scheduler to reload DAGs..."
+          echo "♻️ Restarting scheduler..."
           docker restart airflow-scheduler || docker restart scheduler

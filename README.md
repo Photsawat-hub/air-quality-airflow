@@ -110,11 +110,15 @@ This DAG fetches data from IQAir, transforms it, and stores it into PostgreSQL:
 
 - Airflow display 
 DAG graph
+
 ![DAG Graph](images/DAG-graph.png)
-Gantt view
+
+And Gantt view
+
 ![DAG Screenshot](images/DAG-gantt.png)
 
 - PostgreSQL : Example rows inserted from DAG run
+
 ![DAG PostgreSQL](images/PostgreSQL.png)
 
 ---

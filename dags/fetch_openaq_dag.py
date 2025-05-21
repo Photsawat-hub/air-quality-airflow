@@ -1,11 +1,14 @@
+import os
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import requests
 import psycopg2
 import pandas as pd
+from dotenv import load_dotenv
 
-API_KEY = '371dceb7-7931-4ac2-83ec-ef7e53d9f932'  
+load_dotenv()
+API_KEY = os.getenv("API_KEY") 
 CITY = 'Bangkok'
 STATE = 'Bangkok'
 COUNTRY = 'Thailand'

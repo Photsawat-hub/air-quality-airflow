@@ -8,7 +8,7 @@ This project implements a complete end-to-end data pipeline that collects air qu
 
 - ⏱️ **Scheduler**: Apache Airflow orchestrates the ETL process hourly (configurable)
 - ☁️ **Data Source**: IQAir API providing real-time air quality metrics in **Bangkok, Thailand**, including:
-  - AQI (US/China), PM2.5, temperature, humidity, wind, pressure
+  - AQI (US & China standards), PM2.5, temperature, humidity, wind speed & direction, pressure
 - 🗃️ **Data Sink**: PostgreSQL database for structured data storage
 - 🔁 **Automation**: CI/CD using GitHub Actions + self-hosted runner to auto-deploy DAGs
 - 📊 **Visualization**: Data available for BI tools like Tableau or Looker Studio
@@ -28,24 +28,19 @@ This project implements a complete end-to-end data pipeline that collects air qu
 
 ---
 
-## 🔧 How It Works
+## 🔐 API Key Setup
 
-1. **Extract**  
-   An Airflow DAG fetches air quality data from IQAir API (Bangkok) every hour.
+To use this project, you must have an API key from [IQAir](https://www.iqair.com/air-pollution-data-api).
 
-2. **Transform**  
-   The API response is parsed and transformed into a flat, normalized schema.
+1. Create a file named `.env` in the root folder.
+2. Add the following line to `.env`:
 
-3. **Load**  
-   Data is inserted into a `air_quality` table in PostgreSQL.
+```
+API_KEY=your_actual_api_key_here
+```
 
-4. **Deploy**  
-   Upon any push to the `dags/` folder, GitHub Actions automatically:
-   - Copies the DAG into the Airflow container
-   - Restarts the scheduler for immediate DAG reload
-
-5. **Visualize**  
-   Data is connected to Tableau or Looker Studio for dashboarding.
+> ⚠️ Do **not** share your `.env` file or commit it to GitHub.  
+> Use the provided `.env.example` as a reference only.
 
 ---
 
@@ -79,6 +74,8 @@ air-quality-airflow/
 ├── dags/
 │   └── iqair_air_quality_dag.py
 ├── docker-compose.yml
+├── .env.example
+├── .gitignore
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml

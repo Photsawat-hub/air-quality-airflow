@@ -108,8 +108,9 @@ docker restart airflow-scheduler
 
 This DAG fetches data from IQAir, transforms it, and stores it into PostgreSQL:
 
-- Airflow DAG graph view
-![DAG Screenshot](images/dag-screenshot.png)
+- Airflow DAG graph and Gantt view
+![DAG Graph](images/DAG-graph.png)
+![DAG Screenshot](images/DAG-gantt.png)
 
 - PostgreSQL : Example rows inserted from DAG run
 ![DAG PostgreSQL](images/PostgreSQL.png)

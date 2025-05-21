@@ -143,7 +143,7 @@ http://localhost:8080
 ## 🧑‍💻 Author
 
 **Photsawat Buanuam**  
-📫 [LinkedIn](https://www.linkedin.com/in/photsawat-buanuam)  
+📫 [LinkedIn](https://www.linkedin.com/in/photsawat-buanuam-85a7952a3/)  
 📁 GitHub: [Photsawat-hub](https://github.com/Photsawat-hub)
 
 ---
